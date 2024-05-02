@@ -1,0 +1,38 @@
+name: sky_fitness
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  sizer: ^2.0.15
+  readmore: ^3.0.0
+  gap: ^3.0.1
+  cupertino_icons: ^1.0.2
+  intl: ^0.19.0
+  flutter_riverpod: ^2.4.10
+  url_launcher: ^6.2.4
+  google_fonts: ^6.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+ 
+  fonts:
+  - family: Cabin
+    fonts:
+      - asset: assets/fonts/Cabin/static/Cabin-Regular.ttf
+      - asset: assets/fonts/Cabin/static/Cabin-Bold.ttf
+        weight: 700
+
