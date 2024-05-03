@@ -17,6 +17,7 @@ class ProchainesClassesWidget extends StatelessWidget {
               Text(
                 "Prochaines classes",
                 style: TextStyle(
+                  fontFamily: 'Inter',
                   fontSize: 15.sp,
                   fontWeight: FontWeight.bold,
                 ),
@@ -26,6 +27,7 @@ class ProchainesClassesWidget extends StatelessWidget {
                 child: Text(
                   " Voir tout",
                   style: TextStyle(
+                    fontFamily: 'Inter',
                     fontSize: 11.sp,
                     color: const Color(0xFF0368A0),
                   ),
@@ -77,12 +79,20 @@ class ProchainesClassesWidget extends StatelessWidget {
                           Text(
                             "Zumba",
                             style: TextStyle(
-                              fontWeight: FontWeight.bold,
+                              fontFamily:
+                                  'Inter', // Utilisation de la police Inter
                               fontSize: 12.sp,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                           SizedBox(height: 0.5.h),
-                          const Text("09:00 (45 min)"),
+                          Text(
+                            "09:00 (45 min)",
+                            style: TextStyle(
+                              fontFamily: 'Inter',
+                              fontSize: 10.sp,
+                            ),
+                          ),
                         ],
                       ),
                     ],
@@ -104,14 +114,15 @@ class ProchainesClassesWidget extends StatelessWidget {
                           TextSpan(
                             text: "Réserver ",
                             style: TextStyle(
-                              fontSize: 11.sp,
+                              fontSize: 10.5.sp,
+                              fontFamily: 'Inter',
                               color: const Color(0xFF00601A),
                             ),
                           ),
                           TextSpan(
                             text: "+",
                             style: TextStyle(
-                              fontSize: 13.sp,
+                              fontSize: 12.sp,
                               color: const Color(0xFF00601A),
                               fontWeight: FontWeight.bold,
                             ),
@@ -168,12 +179,19 @@ class ProchainesClassesWidget extends StatelessWidget {
                           Text(
                             " Pilates",
                             style: TextStyle(
-                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Inter',
                               fontSize: 12.sp,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                           SizedBox(height: 0.5.h),
-                          const Text(" 10:00 (60 min)"),
+                          Text(
+                            " 10:00 (60 min)",
+                            style: TextStyle(
+                              fontFamily: 'Inter',
+                              fontSize: 10.sp,
+                            ),
+                          ),
                         ],
                       ),
                     ],
@@ -195,14 +213,15 @@ class ProchainesClassesWidget extends StatelessWidget {
                           TextSpan(
                             text: "Réserver ",
                             style: TextStyle(
-                              fontSize: 11.sp,
+                              fontSize: 10.5.sp,
+                              fontFamily: 'Inter',
                               color: const Color(0xFF00601A),
                             ),
                           ),
                           TextSpan(
                             text: "+",
                             style: TextStyle(
-                              fontSize: 13.sp,
+                              fontSize: 12.sp,
                               color: const Color(0xFF00601A),
                               fontWeight: FontWeight.bold,
                             ),

@@ -78,18 +78,23 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      //  bottomNavigationBar: SkyBottomNavigationBar(
-      //       onTap: (int) {},
-      //       items: const [],
-      //       selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
-      //       selectedItemColor: Colors.black,
-      //       iconSize: 8.w,
-      //       backgroundColor: Colors.white,
-      //       type: BottomNavigationBarType.fixed,
-      //       selectedFontSize: 8.sp,
-      //       unselectedFontSize: 8.sp,
-      //       unselectedItemColor: Colors.black,
-      //     )
+      bottomNavigationBar: SkyBottomNavigationBar(
+        onTap: (int) {},
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: const Color(0xFF01ADF7),
+        elevation: 1,
+        child: Padding(
+          padding: EdgeInsets.all(1.w),
+          child: Image.asset(
+            'assets/icons/KButton.png',
+            height: 24.h,
+            width: 20.h,
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

@@ -15,6 +15,7 @@ class ReservationsWidget extends StatelessWidget {
             "Réservations",
             style: TextStyle(
               fontSize: 15.sp,
+              fontFamily: 'Inter',
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -99,6 +100,7 @@ class ReservationsWidget extends StatelessWidget {
                         label,
                         style: TextStyle(
                           fontSize: 13.sp,
+                          fontFamily: 'Inter',
                           color: Colors.white,
                           fontWeight: FontWeight.w400,
                         ),

@@ -16,6 +16,7 @@ class AbonnementsWidget extends StatelessWidget {
             style: TextStyle(
               fontSize: 15.sp,
               color: const Color.fromRGBO(0, 0, 0, 1),
+              fontFamily: 'Inter',
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -43,19 +44,28 @@ class AbonnementsWidget extends StatelessWidget {
                       Text(
                         " 1 Mois",
                         style: TextStyle(
+                          fontSize: 15.sp,
+                          color: const Color.fromRGBO(0, 0, 0, 1),
+                          fontFamily: 'Inter',
                           fontWeight: FontWeight.bold,
-                          fontSize: 13.sp,
                         ),
                       ),
                       SizedBox(height: 1.h),
                       Text(
                         " 75 000 F/Mois",
-                        style: TextStyle(fontSize: 10.sp),
+                        style: TextStyle(
+                          fontSize: 11.sp,
+                          color: const Color.fromRGBO(0, 0, 0, 1),
+                          fontFamily: 'Inter',
+                        ),
                       ),
                       SizedBox(height: 0.5.h),
                       Text(
                         " Expire le : 12/06/2024",
-                        style: TextStyle(fontSize: 10.sp),
+                        style: TextStyle(
+                          fontSize: 11.sp,
+                          color: const Color.fromRGBO(0, 0, 0, 1),
+                        ),
                       ),
                     ],
                   ),
@@ -65,14 +75,14 @@ class AbonnementsWidget extends StatelessWidget {
                   alignment: Alignment.center,
                   children: [
                     SizedBox(
-                      width: 19.w,
-                      height: 19.w,
+                      width: 18.w,
+                      height: 18.w,
                       child: CircularProgressIndicator(
                         value: 0.4,
                         valueColor: const AlwaysStoppedAnimation<Color>(
                             Color(0xFF7be79c)),
                         backgroundColor: Colors.grey.shade200,
-                        strokeWidth: 3.w,
+                        strokeWidth: 3.5.w,
                       ),
                     ),
                     Positioned(
@@ -84,16 +94,18 @@ class AbonnementsWidget extends StatelessWidget {
                             TextSpan(
                               text: '16\n',
                               style: TextStyle(
-                                fontSize: 16.sp,
+                                fontSize: 14.sp,
+                                color: const Color.fromRGBO(0, 0, 0, 1),
+                                fontFamily: 'Inter',
                                 fontWeight: FontWeight.bold,
-                                color: Colors.black,
                               ),
                             ),
                             TextSpan(
                               text: 'Jours',
                               style: TextStyle(
-                                fontSize: 9.sp,
-                                color: Colors.black,
+                                fontSize: 12.sp,
+                                color: const Color.fromRGBO(0, 0, 0, 1),
+                                fontFamily: 'Inter',
                               ),
                             ),
                           ],

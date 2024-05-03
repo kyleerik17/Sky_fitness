@@ -44,13 +44,17 @@ class TransactionsWidget extends StatelessWidget {
                         "12 Mars 2024",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
+                          fontFamily: 'Inter',
                           fontSize: 12.sp,
                         ),
                       ),
                       SizedBox(height: 0.5.h),
                       Text(
                         " Paiement",
-                        style: TextStyle(fontSize: 10.sp),
+                        style: TextStyle(
+                          fontSize: 10.sp,
+                          fontFamily: 'Inter',
+                        ),
                       ),
                     ],
                   ),
@@ -68,6 +72,7 @@ class TransactionsWidget extends StatelessWidget {
                       "75 000 F",
                       style: TextStyle(
                         fontSize: 12.sp,
+                        fontFamily: 'Inter',
                         fontWeight: FontWeight.bold,
                         color: const Color(0xFF01ADF7),
                       ),
@@ -102,13 +107,17 @@ class TransactionsWidget extends StatelessWidget {
                         "12 Mars 2024",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
+                          fontFamily: 'Inter',
                           fontSize: 12.sp,
                         ),
                       ),
                       SizedBox(height: 0.5.h),
                       Text(
                         " Paiement",
-                        style: TextStyle(fontSize: 10.sp),
+                        style: TextStyle(
+                          fontSize: 10.sp,
+                          fontFamily: 'Inter',
+                        ),
                       ),
                     ],
                   ),
@@ -126,6 +135,7 @@ class TransactionsWidget extends StatelessWidget {
                       "75 000 F",
                       style: TextStyle(
                         fontSize: 12.sp,
+                        fontFamily: 'Inter',
                         fontWeight: FontWeight.bold,
                         color: const Color(0xFF01ADF7),
                       ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
 import 'package:sizer/sizer.dart';
-import 'package:sky_fitness/src/Pages/profile/profile.dart';
+import 'package:sky_fitness/src/Pages/profile/pages/Info-perso/info_perso_page.dart';
 
 class ProfilePage extends ConsumerStatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -18,10 +18,12 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 1.w),
-              color: const Color(0xFFC1E8E3),
-              child: Row(
+            AppBar(
+              backgroundColor: const Color(0xFFC1E8E3),
+              toolbarHeight: 6.h,
+              automaticallyImplyLeading: false,
+              titleSpacing: 0,
+              title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
@@ -88,57 +90,75 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                 ],
               ),
             ),
-            Gap(3.h),
             Stack(
-              alignment: Alignment.bottomCenter,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Align(
-                      alignment: Alignment.topCenter,
-                      child: Image.asset(
-                        'assets/images/userr.png',
-                        width: 23.w,
-                        height: 23.w,
-                      ),
-                    ),
-                    SizedBox(height: 0.5.h),
-                    Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Text(
-                        "Alex KOFFI",
-                        style: TextStyle(
-                          fontSize: 13.sp,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Cabin',
-                          color: Colors.black,
+                    Gap(3.h),
+                    Stack(
+                      children: [
+                        Gap(3.h),
+                        Align(
+                          child: Image.asset(
+                            'assets/images/userr.png',
+                            width: 24.w,
+                            height: 24.w,
+                          ),
                         ),
-                      ),
-                    ),
-                    Center(
-                      child: Container(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 1.w, horizontal: 4.w),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFFFE897),
-                          borderRadius: BorderRadius.circular(1.5.w),
+                        Positioned(
+                          top: -40,
+                          right: 120,
+                          child: Image.asset(
+                            'assets/images/camera.png',
+                            width: 23.w,
+                            height: 23.w,
+                          ),
                         ),
+                      ],
+                    ),
+                    Gap(0.5.h),
+                    Positioned(
+                      child: Align(
                         child: Text(
-                          "Abonné",
+                          "Alex KOFFI",
                           style: TextStyle(
-                            fontSize: 12.sp,
+                            fontSize: 14.sp,
                             fontWeight: FontWeight.bold,
                             fontFamily: 'Cabin',
-                            color: const Color(0xFF736944),
+                            color: Colors.black,
                           ),
                         ),
                       ),
+                    ),
+                    Stack(
+                      children: [
+                        Center(
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 1.w, horizontal: 1.w),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFFFE897),
+                              borderRadius: BorderRadius.circular(1.5.w),
+                            ),
+                            child: Text(
+                              "Abonné",
+                              style: TextStyle(
+                                fontSize: 12.sp,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Cabin',
+                                color: const Color(0xFF736944),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
               ],
             ),
+            Gap(2.h),
             Padding(
               padding: EdgeInsets.all(4.w),
               child: Column(
@@ -150,7 +170,7 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     child: Text(
                       "Compte",
                       style: TextStyle(
-                        fontSize: 11.sp,
+                        fontSize: 12.sp,
                         fontFamily: 'Cabin',
                         color: Colors.black,
                       ),
@@ -158,7 +178,7 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                   ),
                   Divider(
                     color: Colors.grey[500],
-                    height: 0.5.h,
+                    height: 1.h,
                   ),
                   Gap(1.h),
                   Padding(
@@ -276,7 +296,7 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     child: Text(
                       "      Abonnement",
                       style: TextStyle(
-                        fontSize: 11.sp,
+                        fontSize: 12.sp,
                         fontFamily: 'Cabin',
                         color: Colors.black,
                       ),
@@ -373,7 +393,7 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     child: Text(
                       "       Information",
                       style: TextStyle(
-                        fontSize: 10.sp,
+                        fontSize: 12.sp,
                         fontFamily: 'Cabin',
                         color: Colors.black,
                       ),
@@ -382,7 +402,7 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                   Gap(1.h),
                   Divider(
                     color: Colors.grey[500],
-                    height: 0.5.h,
+                    height: 1.h,
                   ),
                   Gap(1.h),
                   Padding(
@@ -444,10 +464,27 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                       ],
                     ),
                   ),
-                  Gap(2.h),
+                  Gap(16.h),
                 ],
               ),
-            )
+            ),
+            Column(
+              children: [
+                TextButton(
+                  onPressed: () {
+                    // Ajoutez votre logique de suppression ici
+                  },
+                  child: Text(
+                    'Supprimer',
+                    style: TextStyle(
+                        color: Colors.red,
+                        fontFamily: 'Cabin',
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12.sp),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),

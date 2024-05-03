@@ -30,9 +30,14 @@ flutter:
     - assets/icons/
  
   fonts:
-  - family: Cabin
-    fonts:
-      - asset: assets/fonts/Cabin/static/Cabin-Regular.ttf
-      - asset: assets/fonts/Cabin/static/Cabin-Bold.ttf
-        weight: 700
-
+    - family: Cabin
+      fonts:
+        - asset: assets/fonts/Cabin/static/Cabin-Regular.ttf
+        - asset: assets/fonts/Cabin/static/Cabin-Bold.ttf
+          weight: 700
+        
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter/static/Inter-Regular.ttf
+        - asset: assets/fonts/Inter/static/Inter-Bold.ttf
+          weight: 700
