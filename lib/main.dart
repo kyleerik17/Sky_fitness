@@ -13,7 +13,7 @@ void main() {
       builder: (context, orientation, deviceType) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: const Home1Page(),
+          home: const NoscoachsPage(),
           theme: ThemeData(),
         );
       },

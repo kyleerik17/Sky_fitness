@@ -11,16 +11,25 @@ class HomeBottomNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
-      backgroundColor: Colors.white,
-      selectedFontSize: 10.sp,
-      unselectedFontSize: 10.sp,
-      items: [
-        BottomNavigationBarItem(
-          icon: Stack(
-            children: [
-              Padding(
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        SizedBox(
+          height: 2.w,
+          child: LinearProgressIndicator(
+            backgroundColor: Colors.white,
+            valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF2B52DB)),
+            value: 0.2,
+          ),
+        ),
+        BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.white,
+          selectedFontSize: 10.sp,
+          unselectedFontSize: 10.sp,
+          items: [
+            BottomNavigationBarItem(
+              icon: Padding(
                 padding: EdgeInsets.only(bottom: 1.w),
                 child: Image.asset(
                   'assets/icons/home2.png',
@@ -28,62 +37,49 @@ class HomeBottomNavigationBar extends StatelessWidget {
                   width: 8.w,
                 ),
               ),
-              Positioned(
-                top: -1,
-                right: 0,
-                left: 0,
-                child: SizedBox(
-                  height: 2.w,
-                  child: LinearProgressIndicator(
-                    backgroundColor: Colors.white,
-                    valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
-                    value: 9,
-                  ),
+              label: 'Acceuil',
+            ),
+            BottomNavigationBarItem(
+              icon: Padding(
+                padding: EdgeInsets.only(bottom: 1.w),
+                child: Image.asset(
+                  'assets/icons/share.png',
+                  color: Colors.grey,
+                  height: 8.w,
+                  width: 8.w,
                 ),
               ),
-            ],
-          ),
-          label: 'Acceuil',
-        ),
-        BottomNavigationBarItem(
-          icon: Padding(
-            padding: EdgeInsets.only(bottom: 1.w),
-            child: Image.asset(
-              'assets/icons/share.png',
-              color: Colors.grey,
-              height: 8.w,
-              width: 8.w,
+              label: 'Activités',
             ),
-          ),
-          label: 'Activités',
-        ),
-        BottomNavigationBarItem(
-          icon: Padding(
-            padding: EdgeInsets.only(bottom: 1.w),
-            child: Image.asset(
-              'assets/icons/calendar1.png',
-              width: 8.w,
-              height: 8.w,
+            BottomNavigationBarItem(
+              icon: Padding(
+                padding: EdgeInsets.only(bottom: 1.w),
+                child: Image.asset(
+                  'assets/icons/calendar1.png',
+                  width: 8.w,
+                  height: 8.w,
+                ),
+              ),
+              label: 'Planning',
             ),
-          ),
-          label: 'Planning',
-        ),
-        BottomNavigationBarItem(
-          icon: Padding(
-            padding: EdgeInsets.only(bottom: 1.w),
-            child: Image.asset(
-              'assets/icons/category.png',
-              width: 8.w,
-              height: 8.w,
+            BottomNavigationBarItem(
+              icon: Padding(
+                padding: EdgeInsets.only(bottom: 1.w),
+                child: Image.asset(
+                  'assets/icons/category.png',
+                  width: 8.w,
+                  height: 8.w,
+                ),
+              ),
+              label: 'Produits',
             ),
-          ),
-          label: 'Produits',
+          ],
+          selectedItemColor: const Color(0xFF2B52DB),
+          unselectedItemColor: Colors.grey,
+          selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
+          onTap: onTap,
         ),
       ],
-      selectedItemColor: const Color(0xFF2B52DB),
-      unselectedItemColor: Colors.grey,
-      selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
-      onTap: onTap,
     );
   }
 }

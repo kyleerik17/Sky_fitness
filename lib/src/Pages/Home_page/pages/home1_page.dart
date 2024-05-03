@@ -96,9 +96,7 @@ class Home1Page extends StatelessWidget {
                 children: [
                   SizedBox(width: 2.h),
                   GestureDetector(
-                    onTap: () {
-                     
-                    },
+                    onTap: () {},
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(3.w),
@@ -158,12 +156,12 @@ class Home1Page extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 2.h),
             ],
           ),
         ),
       ),
       bottomNavigationBar: HomeBottomNavigationBar(
+        // ignore: avoid_types_as_parameter_names
         onTap: (int) {},
       ),
     );
