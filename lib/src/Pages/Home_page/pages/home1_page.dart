@@ -161,7 +161,7 @@ class Home1Page extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: HomeBottomNavigationBar(
-        // ignore: avoid_types_as_parameter_names
+        
         onTap: (int) {},
       ),
     );

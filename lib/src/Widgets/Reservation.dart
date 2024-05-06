@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:sky_fitness/src/Pages/VoirReplays/pages/voir_replays_page.dart';
 
 class ReservationsWidget extends StatelessWidget {
   const ReservationsWidget({Key? key}) : super(key: key);
@@ -29,6 +30,14 @@ class ReservationsWidget extends StatelessWidget {
                   iconAsset: 'assets/icons/ball-tennis.png',
                   label: 'Réserver un terrain',
                   context: context,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ReservationsWidget(),
+                      ),
+                    );
+                  },
                 ),
                 SizedBox(width: 2.w),
                 _buildReservationItem(
@@ -36,6 +45,14 @@ class ReservationsWidget extends StatelessWidget {
                   iconAsset: 'assets/icons/vod.png',
                   label: 'Voir les replays',
                   context: context,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const VoirReplaysPage(),
+                      ),
+                    );
+                  },
                 ),
               ],
             ),
@@ -50,6 +67,7 @@ class ReservationsWidget extends StatelessWidget {
     required String iconAsset,
     required String label,
     required BuildContext context,
+    required onTap,
   }) {
     return Column(
       children: [
