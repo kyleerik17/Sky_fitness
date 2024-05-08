@@ -4,6 +4,7 @@ import 'package:sizer/sizer.dart';
 import 'package:sky_fitness/src/Pages/Home_page/widgets/HomeBottomNavigationBar.dart';
 import 'package:sky_fitness/src/Pages/notification/pages/notification_page.dart';
 import '../../Coachs/pages/noscoachs_page.dart';
+import '../../profile/pages/profile_page.dart';
 
 class Home1Page extends StatelessWidget {
   const Home1Page({Key? key}) : super(key: key);
@@ -23,11 +24,19 @@ class Home1Page extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Image.asset(
-                      'assets/icons/menu.png',
-                      width: 15.w,
-                      height: 4.h,
-                      color: Colors.black,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ProfilePage()),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/icons/menu.png',
+                        width: 8.w,
+                        height: 4.h,
+                      ),
                     ),
                     Image.asset(
                       'assets/images/im.png',
@@ -161,7 +170,6 @@ class Home1Page extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: HomeBottomNavigationBar(
-        
         onTap: (int) {},
       ),
     );

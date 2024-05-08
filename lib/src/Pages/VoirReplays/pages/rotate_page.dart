@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-
-import 'package:sky_fitness/src/Pages/Coachs/pages/coachs.dart';
+import 'package:sky_fitness/src/Pages/VoirReplays/pages/video_page.dart';
 
 class RotatePage extends StatefulWidget {
   const RotatePage({Key? key}) : super(key: key);
@@ -18,14 +17,14 @@ class _RotatePageState extends State<RotatePage>
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 1),
       vsync: this,
-    )..repeat(reverse: true);
+    )..repeat(reverse: false);
 
-    Timer(const Duration(seconds: 4), () {
-      WidgetsBinding.instance!.addPostFrameCallback((_) {
+    Timer(const Duration(seconds: 2), () {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const NoscoachsPage()),
+          MaterialPageRoute(builder: (context) => const VideoPage()),
         );
       });
     });
@@ -37,7 +36,7 @@ class _RotatePageState extends State<RotatePage>
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        color: Colors.black, // Couleur de fond noire
+        color: Colors.black,
         child: Center(
           child: RotationTransition(
             turns: _controller,

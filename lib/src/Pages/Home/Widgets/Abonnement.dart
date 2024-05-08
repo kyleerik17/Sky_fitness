@@ -22,7 +22,7 @@ class AbonnementsWidget extends StatelessWidget {
           ),
           SizedBox(height: 1.0.h),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 5.w),
+            padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.w),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(1.h),
@@ -38,56 +38,61 @@ class AbonnementsWidget extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(
-                  child: Column(
+                  child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        " 1 Mois",
-                        style: TextStyle(
-                          fontSize: 15.sp,
-                          color: const Color.fromRGBO(0, 0, 0, 1),
-                          fontFamily: 'Inter',
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 1.h),
-                      Text(
-                        " 75 000 F/Mois",
-                        style: TextStyle(
-                          fontSize: 11.sp,
-                          color: const Color.fromRGBO(0, 0, 0, 1),
-                          fontFamily: 'Inter',
-                        ),
-                      ),
-                      SizedBox(height: 0.5.h),
-                      Text(
-                        " Expire le : 12/06/2024",
-                        style: TextStyle(
-                          fontSize: 11.sp,
-                          color: const Color.fromRGBO(0, 0, 0, 1),
-                        ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            " 1 Mois",
+                            style: TextStyle(
+                              fontSize: 15.sp,
+                              color: const Color.fromRGBO(0, 0, 0, 1),
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 1.h),
+                          Text(
+                            " 75 000 F/Mois",
+                            style: TextStyle(
+                              fontSize: 11.sp,
+                              color: const Color.fromRGBO(0, 0, 0, 1),
+                              fontFamily: 'Inter',
+                            ),
+                          ),
+                          SizedBox(height: 0.5.h),
+                          Text(
+                            " Expire le : 12/06/2024",
+                            style: TextStyle(
+                              fontSize: 11.sp,
+                              color: const Color.fromRGBO(0, 0, 0, 1),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
                 ),
                 SizedBox(width: 1.0.w),
-                Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    SizedBox(
-                      width: 18.w,
-                      height: 18.w,
-                      child: CircularProgressIndicator(
-                        value: 0.4,
-                        valueColor: const AlwaysStoppedAnimation<Color>(
-                            Color(0xFF7be79c)),
-                        backgroundColor: Colors.grey.shade200,
-                        strokeWidth: 3.5.w,
+                Padding(
+                  padding: EdgeInsets.all(4.w),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      SizedBox(
+                        width: 18.w,
+                        height: 18.w,
+                        child: CircularProgressIndicator(
+                          value: 0.4,
+                          valueColor: const AlwaysStoppedAnimation<Color>(
+                              Color(0xFF7be79c)),
+                          backgroundColor: Colors.grey.shade200,
+                          strokeWidth: 3.5.w,
+                        ),
                       ),
-                    ),
-                    Positioned(
-                      top: 4.0.w,
-                      child: RichText(
+                      RichText(
                         textAlign: TextAlign.center,
                         text: TextSpan(
                           children: [
@@ -111,8 +116,8 @@ class AbonnementsWidget extends StatelessWidget {
                           ],
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ],
             ),

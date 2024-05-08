@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:sky_fitness/src/Pages/Home/home.dart';
 import 'package:sky_fitness/src/Pages/VoirReplays/pages/voir_replays_page.dart';
+import 'src/Pages/VoirReplays/pages/page.dart';
 
 void main() {
   runApp(

@@ -79,8 +79,7 @@ class ProchainesClassesWidget extends StatelessWidget {
                           Text(
                             "Zumba",
                             style: TextStyle(
-                              fontFamily:
-                                  'Inter', // Utilisation de la police Inter
+                              fontFamily: 'Inter',
                               fontSize: 12.sp,
                               fontWeight: FontWeight.bold,
                             ),
@@ -101,37 +100,41 @@ class ProchainesClassesWidget extends StatelessWidget {
                 SizedBox(width: 1.0.w),
                 Container(
                   width: 22.w,
-                  height: 4.4.h,
+                  height: 3.5.h,
                   decoration: BoxDecoration(
                     color: const Color(0xFFd8f1e1),
-                    borderRadius: BorderRadius.circular(2.0.h),
+                    borderRadius: BorderRadius.circular(1.75.h),
                   ),
                   child: TextButton(
                     onPressed: () {},
-                    child: RichText(
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: "Réserver ",
-                            style: TextStyle(
-                              fontSize: 10.5.sp,
-                              fontFamily: 'Inter',
-                              color: const Color(0xFF00601A),
-                            ),
-                          ),
-                          TextSpan(
-                            text: "+",
-                            style: TextStyle(
-                              fontSize: 12.sp,
-                              color: const Color(0xFF00601A),
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
+                    style: ButtonStyle(
+                      padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                        EdgeInsets.zero,
                       ),
                     ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Réserver ",
+                          style: TextStyle(
+                            fontSize: 10.5.sp,
+                            fontFamily: 'Inter',
+                            color: const Color(0xFF00601A),
+                          ),
+                        ),
+                        Text(
+                          "+",
+                          style: TextStyle(
+                            fontSize: 12.sp,
+                            color: const Color(0xFF00601A),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -200,37 +203,41 @@ class ProchainesClassesWidget extends StatelessWidget {
                 SizedBox(width: 2.0.w),
                 Container(
                   width: 22.w,
-                  height: 4.4.h,
+                  height: 3.5.h,
                   decoration: BoxDecoration(
                     color: const Color(0xFFd8f1e1),
-                    borderRadius: BorderRadius.circular(2.0.h),
+                    borderRadius: BorderRadius.circular(1.75.h),
                   ),
                   child: TextButton(
                     onPressed: () {},
-                    child: RichText(
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: "Réserver ",
-                            style: TextStyle(
-                              fontSize: 10.5.sp,
-                              fontFamily: 'Inter',
-                              color: const Color(0xFF00601A),
-                            ),
-                          ),
-                          TextSpan(
-                            text: "+",
-                            style: TextStyle(
-                              fontSize: 12.sp,
-                              color: const Color(0xFF00601A),
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
+                    style: ButtonStyle(
+                      padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                        EdgeInsets.zero,
                       ),
                     ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Réserver ",
+                          style: TextStyle(
+                            fontSize: 10.5.sp,
+                            fontFamily: 'Inter',
+                            color: const Color(0xFF00601A),
+                          ),
+                        ),
+                        Text(
+                          "+",
+                          style: TextStyle(
+                            fontSize: 12.sp,
+                            color: const Color(0xFF00601A),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                )
+                ),
               ],
             ),
           ),

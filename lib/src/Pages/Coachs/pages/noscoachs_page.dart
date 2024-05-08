@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:sky_fitness/src/Pages/Coachs/pages/coachs.dart';
+import '../../Home_page/pages/home1_page.dart';
 
 class NoscoachsPage extends StatelessWidget {
   const NoscoachsPage({Key? key}) : super(key: key);
@@ -19,7 +20,11 @@ class NoscoachsPage extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Home1Page()),
+                    );
                   },
                   child: Container(
                     decoration: const BoxDecoration(
