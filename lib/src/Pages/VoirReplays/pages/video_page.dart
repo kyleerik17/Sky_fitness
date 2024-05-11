@@ -1,8 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 class VideoPage extends StatelessWidget {
-  const VideoPage({Key? key});
+  const VideoPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -87,17 +88,21 @@ class VideoPage extends StatelessWidget {
                         Text(
                           'RP 0043 - 10/05/2024',
                           style: TextStyle(
-                              fontFamily: "Inter",
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
-                              fontSize: 17.sp),
+                            fontFamily: "Inter",
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                            fontSize: 17.sp,
+                          ),
                         ),
-                        Text('1:48 / 40:25',
-                            style: TextStyle(
-                                fontFamily: "Inter",
-                                color: Colors.white70,
-                                fontWeight: FontWeight.w300,
-                                fontSize: 9.sp)),
+                        Text(
+                          '1:48 / 40:25',
+                          style: TextStyle(
+                            fontFamily: "Inter",
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 9.sp,
+                          ),
+                        ),
                       ],
                     ),
                     SizedBox(height: 2.h),
@@ -114,6 +119,37 @@ class VideoPage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildIconStack(
+    String backgroundImage,
+    String iconImage,
+    double backgroundSize,
+  ) {
+    return InkWell(
+     
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
+            width: backgroundSize,
+            height: backgroundSize,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(backgroundImage),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          Image.asset(
+            iconImage,
+            width: 14.w,
+            height: 14.w,
+            color: Colors.white,
+          ),
+        ],
       ),
     );
   }
@@ -148,35 +184,4 @@ class VideoPage extends StatelessWidget {
       ),
     );
   }
-}
-
-Widget _buildIconStack(
-  String backgroundImage,
-  String iconImage,
-  double backgroundSize,
-) {
-  return InkWell(
-    onTap: () {},
-    child: Stack(
-      alignment: Alignment.center,
-      children: [
-        Container(
-          width: backgroundSize,
-          height: backgroundSize,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(backgroundImage),
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
-        Image.asset(
-          iconImage,
-          width: 14.w,
-          height: 14.w,
-          color: Colors.white,
-        ),
-      ],
-    ),
-  );
 }

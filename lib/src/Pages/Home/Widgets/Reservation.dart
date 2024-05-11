@@ -30,29 +30,33 @@ class ReservationsWidget extends StatelessWidget {
                   iconAsset: 'assets/icons/ball-tennis.png',
                   label: 'Réserver un terrain',
                   context: context,
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ReservationsWidget(),
-                      ),
-                    );
-                  },
                 ),
                 SizedBox(width: 2.w),
-                _buildReservationItem(
-                  imageAsset: 'assets/images/im2.png',
-                  iconAsset: 'assets/icons/vod.png',
-                  label: 'Voir les replays',
-                  context: context,
+                GestureDetector(
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                        builder: (context) => const VoirReplaysPage(),
+                      PageRouteBuilder(
+                        transitionDuration: const Duration(milliseconds: 400),
+                        pageBuilder: (_, __, ___) => const VoirReplaysPage(),
+                        transitionsBuilder: (_, animation, __, child) {
+                          return SlideTransition(
+                            position: Tween<Offset>(
+                              begin: const Offset(1.0, 0.0),
+                              end: Offset.zero,
+                            ).animate(animation),
+                            child: child,
+                          );
+                        },
                       ),
                     );
                   },
+                  child: _buildReservationItem(
+                    imageAsset: 'assets/images/im2.png',
+                    iconAsset: 'assets/icons/vod.png',
+                    label: 'Voir les replays',
+                    context: context,
+                  ),
                 ),
               ],
             ),
@@ -67,7 +71,6 @@ class ReservationsWidget extends StatelessWidget {
     required String iconAsset,
     required String label,
     required BuildContext context,
-    required onTap,
   }) {
     return Column(
       children: [

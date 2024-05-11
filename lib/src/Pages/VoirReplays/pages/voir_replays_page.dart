@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:sizer/sizer.dart';
 import 'package:sky_fitness/src/Pages/Home/Pages/home.dart';
-import 'package:sky_fitness/src/Pages/VoirReplays/pages/rotate_page.dart';
-
 import 'page.dart';
 
 class VoirReplaysPage extends StatelessWidget {
@@ -26,10 +24,21 @@ class VoirReplaysPage extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const HomePage()),
-                        );
+                            context,
+                            PageRouteBuilder(
+                              transitionDuration:
+                                  const Duration(milliseconds: 400),
+                              pageBuilder: (_, __, ___) => const HomePage(),
+                              transitionsBuilder: (_, animation, __, child) {
+                                return SlideTransition(
+                                  position: Tween<Offset>(
+                                    begin: const Offset(-1.0, 0.0),
+                                    end: Offset.zero,
+                                  ).animate(animation),
+                                  child: child,
+                                );
+                              },
+                            ));
                       },
                       child: Container(
                         padding: EdgeInsets.all(0.w),
@@ -83,7 +92,7 @@ class VoirReplaysPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Vos favoris",
+                          "Aujourd'hui",
                           style: TextStyle(
                             fontFamily: 'Inter',
                             fontSize: 15.sp,

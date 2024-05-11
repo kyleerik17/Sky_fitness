@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
 import 'package:sizer/sizer.dart';
+import 'package:sky_fitness/src/Pages/Home/Pages/home.dart';
 import 'package:sky_fitness/src/Pages/profile/pages/Info-perso/info_perso_page.dart';
 
 class ProfilePage extends ConsumerStatefulWidget {
@@ -27,9 +28,7 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
+                    onTap: () {},
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -58,8 +57,20 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(
-                                builder: (context) => InfoPersoPage()),
+                            PageRouteBuilder(
+                              transitionDuration:
+                                  const Duration(milliseconds: 400),
+                              pageBuilder: (_, __, ___) => const HomePage(),
+                              transitionsBuilder: (_, animation, __, child) {
+                                return SlideTransition(
+                                  position: Tween<Offset>(
+                                    begin: const Offset(1.0, 0.0),
+                                    end: Offset.zero,
+                                  ).animate(animation),
+                                  child: child,
+                                );
+                              },
+                            ),
                           );
                         },
                         child: Text(
@@ -75,8 +86,20 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(
-                                builder: (context) => InfoPersoPage()),
+                            PageRouteBuilder(
+                              transitionDuration:
+                                  const Duration(milliseconds: 400),
+                              pageBuilder: (_, __, ___) => const HomePage(),
+                              transitionsBuilder: (_, animation, __, child) {
+                                return SlideTransition(
+                                  position: Tween<Offset>(
+                                    begin: const Offset(1.0, 0.0),
+                                    end: Offset.zero,
+                                  ).animate(animation),
+                                  child: child,
+                                );
+                              },
+                            ),
                           );
                         },
                         child: Image.asset(
@@ -206,37 +229,59 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                         ),
                         SizedBox(width: 4.w),
                         Expanded(
-                          child: Row(
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Alex KOFFI",
-                                    style: TextStyle(
-                                      fontSize: 13.sp,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'Cabin',
-                                      color: Colors.black,
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                PageRouteBuilder(
+                                  transitionDuration:
+                                      const Duration(milliseconds: 300),
+                                  pageBuilder: (_, __, ___) => InfoPersoPage(),
+                                  transitionsBuilder:
+                                      (_, animation, __, child) {
+                                    return SlideTransition(
+                                      position: Tween<Offset>(
+                                        begin: const Offset(1.0, 0.0),
+                                        end: Offset.zero,
+                                      ).animate(animation),
+                                      child: child,
+                                    );
+                                  },
+                                ),
+                              );
+                            },
+                            child: Row(
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Alex KOFFI",
+                                      style: TextStyle(
+                                        fontSize: 13.sp,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Cabin',
+                                        color: Colors.black,
+                                      ),
                                     ),
-                                  ),
-                                  Text(
-                                    "Gérer mon profil ",
-                                    style: TextStyle(
-                                      fontSize: 11.sp,
-                                      fontFamily: 'Cabin',
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.grey,
+                                    Text(
+                                      "Gérer mon profil ",
+                                      style: TextStyle(
+                                        fontSize: 11.sp,
+                                        fontFamily: 'Cabin',
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.grey,
+                                      ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                              const Spacer(),
-                              Icon(
-                                Icons.arrow_forward_ios,
-                                size: 5.w,
-                              ),
-                            ],
+                                  ],
+                                ),
+                                const Spacer(),
+                                Icon(
+                                  Icons.arrow_forward_ios,
+                                  size: 5.w,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -471,9 +516,7 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
             Column(
               children: [
                 TextButton(
-                  onPressed: () {
-                    // Ajoutez votre logique de suppression ici
-                  },
+                  onPressed: () {},
                   child: Text(
                     'Supprimer',
                     style: TextStyle(

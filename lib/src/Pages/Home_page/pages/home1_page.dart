@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:sizer/sizer.dart';
 import 'package:sky_fitness/src/Pages/Home_page/widgets/HomeBottomNavigationBar.dart';
+import 'package:sky_fitness/src/Pages/VoirReplays/pages/page.dart';
 import 'package:sky_fitness/src/Pages/notification/pages/notification_page.dart';
 import '../../Coachs/pages/noscoachs_page.dart';
 import '../../profile/pages/profile_page.dart';
@@ -105,7 +106,14 @@ class Home1Page extends StatelessWidget {
                 children: [
                   SizedBox(width: 2.h),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const VoirReplaysPage(),
+                        ),
+                      );
+                    },
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(3.w),

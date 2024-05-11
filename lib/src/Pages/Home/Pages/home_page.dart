@@ -28,8 +28,20 @@ class HomePage extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) => const ProfilePage()),
+                          PageRouteBuilder(
+                            transitionDuration:
+                                const Duration(milliseconds: 400),
+                            pageBuilder: (_, __, ___) => const ProfilePage(),
+                            transitionsBuilder: (_, animation, __, child) {
+                              return SlideTransition(
+                                position: Tween<Offset>(
+                                  begin: const Offset(-1.0, 0.0),
+                                  end: Offset.zero,
+                                ).animate(animation),
+                                child: child,
+                              );
+                            },
+                          ),
                         );
                       },
                       child: Image.asset(
@@ -88,23 +100,6 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: SkyBottomNavigationBar(
-        onTap: (int) {},
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: const Color(0xFF01ADF7),
-        elevation: 1,
-        child: Padding(
-          padding: EdgeInsets.all(1.w),
-          child: Image.asset(
-            'assets/icons/KButton.png',
-            height: 24.h,
-            width: 20.h,
-          ),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

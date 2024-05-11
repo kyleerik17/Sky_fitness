@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:sky_fitness/src/Pages/VoirReplays/pages/voir_replays_page.dart';
-import 'src/Pages/VoirReplays/pages/page.dart';
+import 'package:sky_fitness/src/Pages/Home/Pages/home_page.dart';
+import 'package:sky_fitness/src/Pages/VoirReplays/pages/page.dart';
+
+import 'src/Pages/Classe/Pages/pages.dart';
 
 void main() {
   runApp(
@@ -9,8 +11,11 @@ void main() {
       builder: (context, orientation, deviceType) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: const VoirReplaysPage(),
+          home: const ClassePage(),
           theme: ThemeData(),
+          routes: {
+            '/voirReplays': (context) => const VoirReplaysPage(),
+          },
         );
       },
     ),
