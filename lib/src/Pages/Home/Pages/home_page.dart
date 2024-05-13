@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:sizer/sizer.dart';
+import 'package:sky_fitness/src/Pages/Home/Widgets/bottomnavigation.dart';
 import 'package:sky_fitness/src/Pages/notification/pages/notification_page.dart';
-
 import '../../profile/pages/profile_page.dart';
 import '../Widgets/home_widgets.dart';
 
@@ -98,8 +98,13 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 3.0.h),
             ],
           ),
+          
         ),
       ),
+      bottomNavigationBar: BottomNavigationHome(
+        onTap: (int) {},
+      ),
     );
+    
   }
 }
