@@ -81,18 +81,19 @@ class _BottomNavigationClasseState extends State<BottomNavigationClasse> {
                     'assets/icons/clock.png',
                     height: 8.w,
                     width: 8.w,
-                    color: _selectedIndex == 1 ? Colors.blue : null,
                   ),
-                  Text(
+                  const Text(
                     'Réservation',
-                    style: TextStyle(
-                      color: _selectedIndex == 1 ? Colors.blue : null,
-                    ),
+                    style: TextStyle(),
                   ),
                 ],
               ),
             ),
           ),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: Container(),
           label: '',
         ),
         // BottomNavigationBarItem(
@@ -141,7 +142,7 @@ class _BottomNavigationClasseState extends State<BottomNavigationClasse> {
                     'assets/icons/calendar.png',
                     height: 8.w,
                     width: 8.w,
-                    color: Color(0xFF01ADF7),
+                    color: const Color(0xFF01ADF7),
                   ),
                   const Text(
                     'classe',
@@ -175,13 +176,10 @@ class _BottomNavigationClasseState extends State<BottomNavigationClasse> {
                     'assets/icons/shop-bag.png',
                     height: 8.w,
                     width: 8.w,
-                    color: _selectedIndex == 4 ? Colors.blue : null,
                   ),
                   Text(
                     'Boutiques',
-                    style: TextStyle(
-                      color: _selectedIndex == 4 ? Colors.blue : null,
-                    ),
+                    style: TextStyle(),
                   ),
                 ],
               ),

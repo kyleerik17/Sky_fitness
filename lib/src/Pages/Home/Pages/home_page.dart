@@ -98,13 +98,20 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 3.0.h),
             ],
           ),
-          
         ),
       ),
       bottomNavigationBar: BottomNavigationHome(
         onTap: (int) {},
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Image.asset(
+          'assets/icons/KButton.png',
+          width: 18.w,
+          height: 12.h,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
-    
   }
 }

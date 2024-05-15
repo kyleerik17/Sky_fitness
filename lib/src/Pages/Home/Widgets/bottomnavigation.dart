@@ -95,32 +95,13 @@ class _BottomNavigationHomeState extends State<BottomNavigationHome> {
           ),
           label: '',
         ),
-        // BottomNavigationBarItem(
-        //   icon: GestureDetector(
-        //     onTap: () {
-        //       setState(() {
-        //         _selectedIndex = 2;
-        //       });
-        //       widget.onTap(2);
-        //     },
-        //     child: Padding(
-        //       padding: EdgeInsets.all(4.w),
-        //       child: Row(
-        //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //         children: [
-        //           Text(
-        //             'classe',
-        //             style: TextStyle(
-        //               color: _selectedIndex == 3 ? Colors.blue : null,
-        //             ),
-        //           ),
-        //           // Autres éléments que vous souhaitez afficher
-        //         ],
-        //       ),
-        //     ),
-        //   ),
-        //   label: '',
-        // ),
+        BottomNavigationBarItem(
+          icon: GestureDetector(
+            onTap: () {},
+            child: Container(),
+          ),
+          label: '',
+        ),
         BottomNavigationBarItem(
           icon: GestureDetector(
             onTap: () {
